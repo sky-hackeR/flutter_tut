@@ -1,80 +1,90 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(App());
+void main() {
+  runApp(const App());
+}
 
 class App extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MainPage(),
-    );
-  }
-}
-
-class MainPage extends StatefulWidget {
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  final Random random = Random();
-
-  // List of image URLs for placeholders
-  final List<String> imageUrls = [
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/200',
-    'https://via.placeholder.com/250',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/350',
-  ];
-
-  // List of GIF URLs
-  final List<String> gifUrls = [
-    'https://media.giphy.com/media/l4FGo4yXeJMeBRNLO/giphy.gif',
-    'https://media.giphy.com/media/dzaUX7CAG0Ihi/giphy.gif',
-    'https://media.giphy.com/media/3o6fJ8jngfVrulDK4o/giphy.gif',
-  ];
-
-  // Generate random data with mixed types
-  List<dynamic> _generateRandomData(int count) {
-    List<dynamic> data = [];
-    for (int i = 0; i < count; i++) {
-      int choice = random.nextInt(3);
-      switch (choice) {
-        case 0:
-          // Add random image
-          data.add(Image.network(imageUrls[random.nextInt(imageUrls.length)]));
-          break;
-        case 1:
-          // Add random animation
-          data.add(Icon(Icons.favorite, color: Colors.red));
-          break;
-        case 2:
-          // Add random GIF
-          data.add(Image.network(gifUrls[random.nextInt(gifUrls.length)]));
-          break;
-      }
-    }
-    return data;
-  }
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Generate random data for the ListView
-    List<dynamic> items = _generateRandomData(10);
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('My App'),
-        backgroundColor: Colors.blue,
-      ),
-      body: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Center(child: items[index]),
-          );
-        },
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: SafeArea(
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const CircleAvatar(
+                  backgroundColor: Colors.red,
+                  radius: 70.0,
+                  backgroundImage: AssetImage('images/jola.jpg'),
+                ),
+                const Text(
+                  'Jolayemi Olugbenga David',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40.0,
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Text(
+                  'Junior Software Engineer',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  color: Colors.white,
+                  margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+                  padding: const EdgeInsets.all(15.0),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.phone, color: Colors.black, size: 30.0,),
+                      Text('+234 808 2574 927')
+                    ]
+                  ),
+                ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                Container(
+                  color: Colors.white,
+                  margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+                  padding: const EdgeInsets.all(15.0),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.email, color: Colors.black),
+                      Text('jolayemidavid6@gmail.com')
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                Container(
+                  color: Colors.white,
+                  margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+                  padding: const EdgeInsets.all(15.0),
+                  child: const Text(
+                    'Passionate about building great software that impacts people\'s lives positively.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
