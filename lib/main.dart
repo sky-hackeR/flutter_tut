@@ -83,22 +83,22 @@ class App extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 10.0,
-                  ),
-                  Container(
-                    color: Colors.white,
-                    margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-                    padding: const EdgeInsets.all(10.0),
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                    child: const FillableForm(),
-                  ),
-                ],
+                //   const SizedBox(
+                //     height: 10.0,
+                //   ),
+                //   Container(
+                //     color: Colors.white,
+                //     margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+                //     padding: const EdgeInsets.all(10.0),
+                //   ),
+                //   const SizedBox(
+                //     height: 20.0,
+                //   ),
+                //   Padding(
+                //     padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                //     child: const FillableForm(),
+                //   ),
+                // ],
               ),
             ),
           ),
