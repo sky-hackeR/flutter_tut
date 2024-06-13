@@ -70,19 +70,19 @@ class App extends StatelessWidget {
                   const SizedBox(
                     height: 10.0,
                   ),
-                  Container(
-                    color: Colors.white,
-                    margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-                    padding: const EdgeInsets.all(15.0),
-                    child: const Text(
-                      'Passionate about building great software that impacts people\'s lives positively.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16.0,
-                      ),
-                    ),
-                  ),
+                  // Container(
+                  //   color: Colors.white,
+                  //   margin: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+                  //   padding: const EdgeInsets.all(15.0),
+                  //   child: const Text(
+                  //     'Passionate about building great software that impacts people\'s lives positively.',
+                  //     textAlign: TextAlign.center,
+                  //     style: TextStyle(
+                  //       color: Colors.black,
+                  //       fontSize: 16.0,
+                  //     ),
+                  //   ),
+                  // ),
               ),
             ),
           ),
